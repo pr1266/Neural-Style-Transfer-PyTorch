@@ -1,1 +1,1 @@
-## PyTorch Implementation of Neural-Style-Transform based on Paper
+## PyTorch Implementation of Neural-Style-Transfer based on Paper
