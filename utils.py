@@ -2,11 +2,11 @@
 from PIL import Image
 import torch
 import numpy as np
+from torchvision import transforms
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 def load_image(image_path, transform=None, max_size=None, shape=None):
-    """Load an image and convert it to a torch tensor."""
     image = Image.open(image_path)
     
     if max_size:
@@ -21,4 +21,4 @@ def load_image(image_path, transform=None, max_size=None, shape=None):
         image = transform(image).unsqueeze(0)
     
     return image.to(device)
-    
+
