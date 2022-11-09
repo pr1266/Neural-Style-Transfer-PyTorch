@@ -3,6 +3,7 @@
 one of the most beautifull applications of deep neural networks is neural style transfer. let's take an example:
 suppose that we have an source image that we want to paint it in the style of a famous painting. so we can init the target image with a random tensor, and then change it through train stage and make it similar to combination of both source and style image. whatever we consider a larger coefficient for style-content loss, output will be more similar to style image and more different from source content image. the idea of this work is to feed both source and style image to a pre-trained network (like VGG19) and capture certain convolution layers output, calculate loss according to both style and source image using Gram matrix.
 <br>
+<br>
 
 <p align="center"><img align="center" src="https://github.com/pr1266/Neural-Style-Transfer-PyTorch/blob/master/src/1.png" alt="paper figure" /></p>
 
@@ -15,4 +16,10 @@ here is picture of the famous persian singer "Ebi" as source content one of the 
 
 <p align="center"><img align="center" src="https://github.com/pr1266/Neural-Style-Transfer-PyTorch/blob/master/output/Untitled%20design.png" alt="output figure" /></p>
 
-<br>
+<hr>
+
+## How to Run?
+add your style and src images path using arguments and simply run the command below, you can also left arguments empty to use default arg values:
+```
+python transfer.py
+```
